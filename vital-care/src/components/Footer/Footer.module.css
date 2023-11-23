@@ -1,0 +1,12 @@
+.footerContainer{
+    background-color: #55A2A7;
+    color: white;
+}
+
+.footerContainer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1% 0;
+}
