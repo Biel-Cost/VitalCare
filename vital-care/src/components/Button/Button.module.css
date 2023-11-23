@@ -1,0 +1,15 @@
+.button{
+    background-color: #BAFFFF;
+    border: transparent;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 20px;
+    border-radius: 30px;
+}
