@@ -1,0 +1,13 @@
+.contentContainer {
+  min-height: calc(100vh - 209px);
+  margin: 1% 0;
+  padding: 5%;
+  background-image: url("../assets/layout-background.png");
+}
+
+.content {
+    background-color: white;
+    padding: 2%;
+    min-height: 70vh;
+    border-radius: 50px;
+}
