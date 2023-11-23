@@ -1,0 +1,31 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #55A2A7;
+    font-family: inherit;
+    padding: 0 5%;
+    height: 10vh;
+}
+
+.headerTitle{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #BAFFFF;
+    padding: 0.5%;
+}
+
+.headerTitle h1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-top: 8%;
+}
+
+.headerButtons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
