@@ -1,96 +1,69 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from 'react';
-import styles from './ConfiguracoesPulseira.module.css'; // Lembre-se de criar este arquivo CSS
+import React, { useState } from "react";
+import styled from "./configPulseira.module.css"; // Lembre-se de criar este arquivo CSS
+import { Button } from "@/components/Button/Button";
 
 export default function ConfiguracoesPulseira() {
-  const [codigoPulseira, setCodigoPulseira] = useState('');
-  const [registroBatimento, setRegistroBatimento] = useState(false);
-  const [registroPressao, setRegistroPressao] = useState(false);
-  const [registroLocalizacao, setRegistroLocalizacao] = useState(false);
+  const [codigoPulseira, setCodigoPulseira] = useState("");
+  const [selectValue, setSelectValue] = useState('')
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Aqui você adiciona a lógica para processar/enviar os dados de configuração
-    console.log({
-      codigoPulseira,
-      registroBatimento,
-      registroPressao,
-      registroLocalizacao
-    });
+    setCodigoPulseira("");
   };
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value, checked } = e.target;
+  const handleInputChange = (e: any) => {
+    setCodigoPulseira(e.target.value);
+  };
 
-    switch (name) {
-      case 'codigoPulseira':
-        setCodigoPulseira(value);
-        break;
-      case 'registroBatimento':
-        setRegistroBatimento(checked);
-        break;
-      case 'registroPressao':
-        setRegistroPressao(checked);
-        break;
-      case 'registroLocalizacao':
-        setRegistroLocalizacao(checked);
-        break;
-      default:
-        break;
-    }
+
+  const handleSelectChange = (e: any) => {
+    setSelectValue(e.target.value);
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styled.pulseiraConfigContainer}>
       <h2>Configurações da Pulseira</h2>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.field}>
+      <form className={styled.pulseiraConfigForm} onSubmit={handleSubmit}>
+        <div className={styled.pulseiraConfigField}>
           <label>
             Código da Pulseira:
-            <input 
+            <input
               type="text"
-              name="codigoPulseira"
               value={codigoPulseira}
               onChange={handleInputChange}
               placeholder="Digite o código da pulseira"
             />
           </label>
         </div>
-        <div className={styles.field}>
+        <div className={styled.pulseiraConfigLabels}>
           <label>
             Ativar Registro de Batimento Cardíaco:
-            <input 
-              type="checkbox"
-              name="registroBatimento"
-              checked={registroBatimento}
-              onChange={handleInputChange}
-            />
+            <select onChange={handleSelectChange}>
+              <option value={selectValue}>Selecione uma opção</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
           </label>
-        </div>
-        <div className={styles.field}>
           <label>
             Ativar Registro de Pressão:
-            <input 
-              type="checkbox"
-              name="registroPressao"
-              checked={registroPressao}
-              onChange={handleInputChange}
-            />
+            <select onChange={handleSelectChange}>
+              <option value={selectValue}>Selecione uma opção</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
           </label>
-        </div>
-        <div className={styles.field}>
           <label>
             Ativar Registro de Localização:
-            <input 
-              type="checkbox"
-              name="registroLocalizacao"
-              checked={registroLocalizacao}
-              onChange={handleInputChange}
-            />
+            <select onChange={handleSelectChange}>
+              <option value={selectValue}>Selecione uma opção</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
           </label>
         </div>
-        <div className={styles.buttonContainer}>
-          <button type="submit">Salvar Configurações</button>
+        <div className={styled.pulseiraConfigBtn}>
+          <Button onClick={() => {}}>Salvar Configurações</Button>
         </div>
       </form>
     </div>

@@ -22,8 +22,6 @@ export default function Cadastro() {
             Data de nascimento:
             <input type="date" />
           </label>
-        </div>
-        <div className={styled.cadastroLabels}>
           <label>
             Gênero:
             <select>
@@ -42,9 +40,45 @@ export default function Cadastro() {
             <input type="password" placeholder="Digite sua senha" />
           </label>
         </div>
+        <div className={styled.cadastroLabels}>
+          <label>
+            Rua:
+            <input type="text" placeholder="Digite o nome da rua" />
+          </label>
+          <label>
+            Número:
+            <input type="text" placeholder="Digite o número" />
+          </label>
+          <label>
+            Complemento:
+            <input
+              type="text"
+              placeholder="Digite o complemento (ex: apto, bloco)"
+            />
+          </label>
+          <label>
+            Cidade:
+            <input type="text" placeholder="Digite a cidade" />
+          </label>
+          <label>
+            Estado:
+            <input type="text" placeholder="Digite o estado" />
+          </label>
+          <label>
+            CEP:
+            <input type="text" placeholder="Digite o CEP" />
+          </label>
+        </div>
       </div>
       <div>
-        <Button onClick={() => {router.push("/cadastro/informacoes-saude")}}> Próximo </Button>
+        <Button
+          onClick={() => {
+            router.push("/cadastro/informacoes-saude");
+          }}
+        >
+          {" "}
+          Próximo{" "}
+        </Button>
       </div>
     </div>
   );
