@@ -1,0 +1,19 @@
+.infoSaudeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoSaudeForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10% 0;
+}
+
+.infoSaudeLabels{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+}

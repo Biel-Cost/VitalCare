@@ -3,7 +3,6 @@
 import { Button } from "@/components/Button/Button";
 import styled from "./cadastro.module.css";
 import { useRouter } from "next/navigation";
-
 export default function Cadastro() {
     const router = useRouter()
 
