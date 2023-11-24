@@ -1,0 +1,42 @@
+.multiLabel{
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.multiLabelInput{
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 5% 1%;
+    width: 20vw;
+    margin: 1%;
+    transition: background-color 0.25s;
+}
+
+.multiLabelInput:hover{
+    background-color: #ababab;
+}
+
+.multiLabelInput:focus{
+    outline: transparent;
+    border: solid 1px #ababab;
+}
+
+.multiLabelSelect{
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 4.6% 1%;
+    width: 20vw;
+    margin: 1%;
+    transition: background-color 0.25s;
+}
+
+.infoSaudeForm select:hover{
+    background-color: #ababab;
+}
+
+.infoSaudeForm select:focus{
+    outline: transparent;
+    border: solid 1px #ababab;
+}
