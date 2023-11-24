@@ -22,7 +22,7 @@ export default function SaudeInfo() {
         </div>
       </div>
       <div>
-        <Button onClick={() => {}}>Próximo</Button>
+        <Button onClick={() => {router.push('/cadastro/contato-emergencia')}}>Próximo</Button>
       </div>
     </div>
   );

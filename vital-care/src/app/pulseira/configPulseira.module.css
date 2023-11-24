@@ -1,0 +1,67 @@
+.pulseiraConfigContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulseiraConfigForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 0;
+}
+
+.pulseiraConfigForm label{
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.pulseiraConfigForm input{
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 5% 1%;
+    width: 20vw;
+    margin: 1%;
+    transition: background-color 0.25s;
+}
+
+.pulseiraConfigForm input:hover{
+    background-color: #ababab;
+}
+
+.pulseiraConfigForm input:focus{
+    outline: transparent;
+    border: solid 1px #ababab;
+}
+
+.pulseiraConfigForm select{
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 4.6% 1%;
+    width: 20vw;
+    margin: 1%;
+    transition: background-color 0.25s;
+}
+
+.pulseiraConfigForm select:hover{
+    background-color: #ababab;
+}
+
+.pulseiraConfigForm select:focus{
+    outline: transparent;
+    border: solid 1px #ababab;
+}
+
+.pulseiraConfigBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.pulseiraConfigBtn Button{
+    width: 20vw;
+}

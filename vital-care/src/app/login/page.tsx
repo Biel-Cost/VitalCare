@@ -1,26 +1,34 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/Button/Button";
-import styled from "./login.module.css"
-import Link from "next/link";
+import styled from "./login.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
-    return (
-      <div className={styled.loginContainer}>
-        <div className={styled.loginForm}>
-          <label>
-            E-mail:
-            <input type="e-mail" placeholder="Digite seu e-mail" />
-          </label>
+  const router = useRouter();
 
-          <label>
-            Senha:
-            <input type="password" placeholder="Digite sua senha" />
-          </label>
-        </div>
-        <div>
-          <Button onClick={() => []}> Entrar </Button>
-        </div>
+  return (
+    <div className={styled.loginContainer}>
+      <div className={styled.loginForm}>
+        <label>
+          E-mail:
+          <input type="e-mail" placeholder="Digite seu e-mail" />
+        </label>
+
+        <label>
+          Senha:
+          <input type="password" placeholder="Digite sua senha" />
+        </label>
       </div>
-    );
+      <div>
+        <Button
+          onClick={() => {
+            router.push("/pulseira");
+          }}
+        >
+          Entrar
+        </Button>
+      </div>
+    </div>
+  );
 }
