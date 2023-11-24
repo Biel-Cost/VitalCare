@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/Button/Button";
 import styled from "./login.module.css"
+import Link from "next/link";
 
 export default function Login() {
     return (
