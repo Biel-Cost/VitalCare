@@ -3,6 +3,7 @@
   margin: 1% 0;
   padding: 5%;
   background-image: url("../assets/layout-background.png");
+  background-color: #10BAEF;
 }
 
 .content {
@@ -10,4 +11,6 @@
     padding: 2%;
     min-height: 70vh;
     border-radius: 50px;
+    place-content: center;
+    display: flex;
 }
